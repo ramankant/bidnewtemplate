@@ -13,6 +13,106 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
+	<style>
+
+
+.cnt{
+   margin: 5% 10%;
+   background: transparent;
+   
+  
+
+	
+	//
+// Badges
+// --------------------------------------------------
+
+
+
+</style>
+<script src="assets/js/jquery.min.js"></script>
+
+<script>
+
+jQuery(function(){
+        
+             jQuery('.targetDiv').hide();
+                jQuery('#div1').show();
+       
+        jQuery('.showSingle').click(function(){
+              jQuery('.targetDiv').hide();
+              jQuery('#div'+$(this).attr('target')).show();
+        });
+});
+</script>
+ <link rel="stylesheet" href="bootstrap.min.css">
+  
+  <script src="bootstrap.min.js"></script>
+  
+<style>
+::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}
+div{
+  box-sizing:border-box;
+}
+
+
+.horizontal-scroll-wrapper{
+  position:absolute;
+  display:block;
+  top:0;
+  left:0;
+  width:80px;
+  max-height:1396px;
+  margin:0;
+  background:#abc;
+  overflow-y:auto;
+  overflow-x:hidden;
+  transform:rotate(-90deg) translateY(-80px);
+  transform-origin:right top;
+}
+.horizontal-scroll-wrapper > div{
+      display: block;
+    padding: 0px;
+    background: #fff;
+    transform: rotate(90deg);
+    transform-origin: right top;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.squares{
+  padding:60px 0 0 0;
+  
+    margin-top: 166px;
+}
+
+.squares > div{
+ width: 49px;
+    
+   
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+}
+
+.rectangles{
+  top:100px;
+  padding:100px 0 0 0;
+}
+.rectangles > div{
+  width:140px;
+  height:60px;
+  margin:50px 10px;
+  padding:5px;
+  background:#cab;
+  transform:rotate(90deg) translateY(80px);
+  transform-origin: right top;
+  }
+  
+  
+</style>
+
 	<body class="homepage">
 		<div id="page-wrapper">
 
@@ -23,34 +123,209 @@
 				<div id="banner-wrapper">
 					<div id="banner" class="box container">
 						<div class="row">
-							<div class="7u 12u(medium)" style="text-align: center;">
-								<h3><span style="color:red;">2</span> selected bid</h3>
-								
-							</div>
-							
-						</div>
-					</div>
-				</div>
-                  <div style="font-weight:bold;">Choose bid numbers</div>
-			
-				<div id="banner-wrapper">
-					<div id="banner" class="box container" style="padding: 4.5em;">
-						<div class="row">
-							<div class="7u 12u(medium)" style="text-align: center;">
-								
-								
-							</div>
-							
-						</div>
-					</div>
-				</div>
+						<div class=" horizontal-scroll-wrapper squares" >
+ 
+  <div><button class="showSingle " target="1" id="button1" onClick="changeColor(this.id)">1</button></div>
+  <div><button class="showSingle" target="2" id="button2" onClick="changeColor(this.id)">2</button></div>
+  <div><button class="showSingle" target="3" id="button3" onClick="changeColor(this.id)">3</button></div>
+  <div><button class="showSingle" target="4" id="button4" onClick="changeColor(this.id)">4</button></div>
+  <div><button class="showSingle" target="5" id="button5" onClick="changeColor(this.id)">5</button></div>
+  <div><button class="showSingle" target="6" id="button6" onClick="changeColor(this.id)">6</button></div>
+  <div><button class="showSingle" target="7" id="button7" onClick="changeColor(this.id)">7</button></div>
+  <div><button class="showSingle" target="8" id="button8" onClick="changeColor(this.id)">8</button></div>
+  <div><button class="showSingle" target="9" id="button9" onClick="changeColor(this.id)">9</button></div>
+  <div><button>10</button></div>
+  <div><button>11</button></div>
+  <div><button>12</button></div>
+  <div><button>13</button></div>
+  <div><button>14</button></div>
+  <div><button>15</button></div>
+  <div><button>16</button></div>
+  <div><button>17</button></div>
+  <div><button>18</button></div>
+  <div><button>19</button></div>
+  <div><button>20</button></div>
+  
 
+</div>
+
+<script type="text/javascript">
+    function changeColor(id) {    
+        var tabs = document.getElementsByClassName('showSingle')
+        for (var i = 0; i < tabs.length; ++i) {
+            var item = tabs[i];
+            item.style.backgroundColor = (item.id == id) ? "#20B2AA" : "";
+        }
+    }
+</script>
+
+								
+							</div>
+							<div class="7u 12u(medium)" style="text-align: center;">
+								<h3 style="margin-top: 44px;"><span style="color:red;">2</span> selected bid</h3>
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>
+                  <div style="font-weight:bold; margin-top: 10px; margin-bottom: 10px; margin-left: 34px;">Choose bid numbers</div>
+			
+				
 			<!-- Main -->
 				<div id="main-wrapper">
-					<div class="container">
-					Seleded the bid
+					<div class="container" style="font-weight:bold; margin-left: 25px;">
+					Selected the bid
 						<div class="row 200%">
-							
+							<style>
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 7px 23px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #cccccc;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+   </style>
+<section class="cnt">
+<div id="div1" class="targetDiv">
+<span class="badge badge-secondary">00.01</span>
+  <span class="badge badge-secondary">00.02</span>
+  <span class="badge badge-secondary">00.03</span>
+  <span class="badge badge-secondary">00.04</span>
+  <span class="badge badge-secondary">00.05</span>
+  <span class="badge badge-secondary">00.06</span>
+  <span class="badge badge-secondary">00.07</span>
+  <span class="badge badge-secondary">00.08</span>
+  <span class="badge badge-secondary">00.09</span>
+  <span class="badge badge-secondary">00.10</span><br>
+   <span class="badge badge-secondary">00.11</span>
+  </div>
+<div id="div2" class="targetDiv">
+<span class="badge badge-secondary">01.01</span>
+  <span class="badge badge-secondary">01.02</span>
+  <span class="badge badge-secondary">01.03</span>
+  <span class="badge badge-secondary">01.04</span>
+  <span class="badge badge-secondary">01.05</span>
+  <span class="badge badge-secondary">01.06</span>
+  <span class="badge badge-secondary">01.07</span>
+   <span class="badge badge-secondary">01.08</span>
+    <span class="badge badge-secondary">01.09</span>
+	 <span class="badge badge-secondary">01.10</span><br>
+	 <span class="badge badge-secondary">01.11</span>
+  </div>
+<div id="div3" class="targetDiv">
+<span class="badge badge-secondary">02.01</span>
+  <span class="badge badge-secondary">02.02</span>
+  <span class="badge badge-secondary">02.03</span>
+  <span class="badge badge-secondary">02.04</span>
+  <span class="badge badge-secondary">02.05</span>
+  <span class="badge badge-secondary">02.06</span>
+  <span class="badge badge-secondary">02.07</span>
+   <span class="badge badge-secondary">02.08</span>
+    <span class="badge badge-secondary">02.09</span>
+	 <span class="badge badge-secondary">02.10</span><br>
+	  <span class="badge badge-secondary">02.11</span>
+  </div>
+<div id="div4" class="targetDiv">
+<span class="badge badge-secondary">03.01</span>
+  <span class="badge badge-secondary">03.02</span>
+  <span class="badge badge-secondary">03.03</span>
+  <span class="badge badge-secondary">03.04</span>
+  <span class="badge badge-secondary">03.05</span>
+  <span class="badge badge-secondary">03.06</span>
+  <span class="badge badge-secondary">03.07</span>
+  <span class="badge badge-secondary">03.08</span>
+  <span class="badge badge-secondary">03.09</span>
+  <span class="badge badge-secondary">03.10</span><br>
+  <span class="badge badge-secondary">03.11</span>
+  </div>
+  
+  <div id="div5" class="targetDiv">
+<span class="badge badge-secondary">04.01</span>
+  <span class="badge badge-secondary">04.02</span>
+  <span class="badge badge-secondary">04.03</span>
+  <span class="badge badge-secondary">04.04</span>
+  <span class="badge badge-secondary">04.05</span>
+  <span class="badge badge-secondary">04.06</span>
+  <span class="badge badge-secondary">04.07</span>
+    <span class="badge badge-secondary">04.08</span>
+	  <span class="badge badge-secondary">04.09</span>
+	    <span class="badge badge-secondary">04.10</span><br>
+		  <span class="badge badge-secondary">04.11</span>
+  </div>
+  <div id="div6" class="targetDiv">
+<span class="badge badge-secondary">05.01</span>
+  <span class="badge badge-secondary">05.02</span>
+  <span class="badge badge-secondary">05.03</span>
+  <span class="badge badge-secondary">05.04</span>
+  <span class="badge badge-secondary">05.05</span>
+  <span class="badge badge-secondary">05.06</span>
+  <span class="badge badge-secondary">05.07</span>
+  <span class="badge badge-secondary">05.08</span>
+  <span class="badge badge-secondary">05.09</span>
+  <span class="badge badge-secondary">05.10</span>
+  <span class="badge badge-secondary">05.11</span><br>
+  <span class="badge badge-secondary">05.12</span>
+  </div>
+  <div id="div7" class="targetDiv">
+<span class="badge badge-secondary">06.01</span>
+  <span class="badge badge-secondary">06.02</span>
+  <span class="badge badge-secondary">06.03</span>
+  <span class="badge badge-secondary">06.04</span>
+  <span class="badge badge-secondary">06.05</span>
+  <span class="badge badge-secondary">06.06</span>
+  <span class="badge badge-secondary">06.07</span>
+   <span class="badge badge-secondary">06.08</span>
+    <span class="badge badge-secondary">06.09</span>
+	 <span class="badge badge-secondary">06.10</span><br>
+	  <span class="badge badge-secondary">06.11</span>
+  </div>
+  <div id="div8" class="targetDiv">
+<span class="badge badge-secondary">07.01</span>
+  <span class="badge badge-secondary">07.02</span>
+  <span class="badge badge-secondary">07.03</span>
+  <span class="badge badge-secondary">07.04</span>
+  <span class="badge badge-secondary">07.05</span>
+  <span class="badge badge-secondary">07.06</span>
+  <span class="badge badge-secondary">07.07</span>
+   <span class="badge badge-secondary">07.08</span>
+    <span class="badge badge-secondary">07.09</span>
+	 <span class="badge badge-secondary">07.10</span><br>
+	  <span class="badge badge-secondary">07.11</span>
+  </div>
+  <div id="div9" class="targetDiv">
+<span class="badge badge-secondary">08.01</span>
+  <span class="badge badge-secondary">08.02</span>
+  <span class="badge badge-secondary">08.03</span>
+  <span class="badge badge-secondary">08.04</span>
+  <span class="badge badge-secondary">08.05</span>
+  <span class="badge badge-secondary">08.06</span>
+  <span class="badge badge-secondary">08.07</span>
+  <span class="badge badge-secondary">08.08</span>
+  <span class="badge badge-secondary">08.09</span>
+  <span class="badge badge-secondary">08.10</span><br>
+  <span class="badge badge-secondary">08.11</span>
+  </div>
+  <div id="div10" class="targetDiv">
+<span class="badge badge-secondary">09.01</span>
+  <span class="badge badge-secondary">09.02</span>
+  <span class="badge badge-secondary">09.03</span>
+  <span class="badge badge-secondary">09.04</span>
+  <span class="badge badge-secondary">09.05</span>
+  <span class="badge badge-secondary">09.06</span>
+  <span class="badge badge-secondary">09.07</span>
+   <span class="badge badge-secondary">09.08</span>
+    <span class="badge badge-secondary">09.09</span>
+	 <span class="badge badge-secondary">09.10</span><br>
+	  <span class="badge badge-secondary">09.11</span>
+  </div>
+</section>
 							
 						</div>
 					</div>
@@ -60,8 +335,8 @@
 
 
 			</div>
-			<p><span style="color:red;"> 0</span> bid selected</p>
-            <input type="submit" name="submit" value="BID" style="">
+			<p style="text-align: center;"><span style="color:red;"> 0</span> bid selected</p>
+            <p style="text-align: center;"><input type="submit" name="submit" value="BID" style="background-color:#20B2AA; color:#ffffff; padding-left: 130px; padding-right: 130px;"></p>
 
 		
 		
